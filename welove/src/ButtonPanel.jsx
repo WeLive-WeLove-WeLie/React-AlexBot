@@ -8,14 +8,27 @@ function ButtonPanel({ details, sendQuery }) {
   };
 
   return (
-    <div className="button-panel">
+    <div className="button-panel" style={{ display: "flex", justifyContent: "center", gap: "10px", marginLeft: "40px" }}>
       {Object.entries(details).map(([key, value]) => (
-        <button key={key} onClick={() => handleButtonClick(key, value)}>
-          {key}
+        <button 
+          key={key} 
+          onClick={() => handleButtonClick(key, value)} 
+          style={{ padding: "10px", minWidth: "120px", backgroundColor: "#f0f0f0", cursor: "pointer", textAlign: "center" }}
+          onMouseOver={(e) => e.target.style.backgroundColor = "#b2d2d2"}
+          onMouseOut={(e) => e.target.style.backgroundColor = "#f0f0f0"}
+
+        >
+          {key.charAt(0).toUpperCase() + key.slice(1)}
         </button>
       ))}
-      <button onClick={() => sendQuery({ key: "review", value: "Summary of Reviews" })}>
-        Summary of Reviews
+      <button 
+        onClick={() => sendQuery({ key: "Review", value: "Summary of Reviews" })} 
+        style={{ padding: "10px", minWidth: "120px", backgroundColor: "#f0f0f0", cursor: "pointer", textAlign: "center" }}
+        onMouseOver={(e) => e.target.style.backgroundColor = "#b2d2d2"}
+        onMouseOut={(e) => e.target.style.backgroundColor = "#f0f0f0"}
+
+      >
+        Summary Of Reviews
       </button>
     </div>
   );
