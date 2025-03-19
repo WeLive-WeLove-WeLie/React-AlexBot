@@ -1,0 +1,65 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-panel {
+  width: 300px; /* Fixed width */
+  min-width: 300px; /* Ensures it doesn't shrink */
+  padding: 20px;
+  border-right: 2px solid #ccc; /* Adds a separation line */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.right-panel {
+  flex-grow: 1; /* Takes the remaining space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto; /* Prevents overflow from affecting layout */
+}
+
+.button-panel {
+  display: flex;
+  flex-wrap: wrap; /* Wrap buttons if they exceed container width */
+  gap: 10px; /* Adds space between buttons */
+  justify-content: center; /* Center align buttons */
+  margin-top: 20px;
+  overflow: auto; 
+}
+
+.button-panel button {
+  background-color: #D3D3D3; /* Blue color */
+  color: black; /* White text */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-panel button:hover {
+  background-color: #FFDB58; 
+}
+
+.chat-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
